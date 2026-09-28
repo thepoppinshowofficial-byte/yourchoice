@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>YourFavChoice — Discover Your Favourite Brands</title>
+  <meta name="description" content="Discover fashion, lifestyle and kids brands from the AJIO project in a fresh YourFavChoice brand directory.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="#"><span>your</span>favchoice</a>
+  <nav><a href="#brands">Brands</a><a href="#about">About</a></nav>
+  <button class="nav-cta" onclick="document.querySelector('#brandSearch').focus()">Find a brand</button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">STYLE • EVERYDAY • DISCOVERY</p>
+    <h1>Your favourites,<br><em>all in one place.</em></h1>
+    <p class="hero-text">Explore the brands already featured in the collection — from fashion staples to kids' favourites.</p>
+    <div class="search-wrap">
+      <span>⌕</span>
+      <input id="brandSearch" type="search" placeholder="Search brands..." autocomplete="off">
+      <kbd>⌘ K</kbd>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="art-card art-one"><span>FASHION</span><b>Find<br>your fit.</b></div>
+    <div class="art-card art-two"><span>PLAY</span><b>Little<br>big joys.</b></div>
+    <div class="art-orb"></div>
+  </div>
+</section>
+
+<section class="brand-section" id="brands">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">THE DIRECTORY</p>
+      <h2>Brands to explore</h2>
+    </div>
+    <div class="result-count" id="resultCount"></div>
+  </div>
+
+  <div class="filters" id="filters">
+    <button class="filter active" data-filter="All">All</button>
+    <button class="filter" data-filter="Women">Women</button>
+    <button class="filter" data-filter="Men">Men</button>
+    <button class="filter" data-filter="Kids">Kids</button>
+  </div>
+
+  <div class="brand-grid" id="brandGrid"></div>
+  <div class="empty" id="emptyState" hidden>No brands match your search.</div>
+</section>
+
+<section class="about" id="about">
+  <div>
+    <p class="eyebrow">ABOUT YOURFAVCHOICE</p>
+    <h2>A cleaner way to browse brands.</h2>
+  </div>
+  <p>This is a new visual treatment built from the brand catalogue present in the AJIO repository. The interface is intentionally different from the original clone, with a searchable directory, category filters and responsive brand cards.</p>
+</section>
+</main>
+
+<footer>
+  <span>yourfavchoice</span>
+  <span>Brand directory • 2026</span>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
