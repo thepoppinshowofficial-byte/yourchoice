@@ -27,10 +27,12 @@ document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",(
 }));
 search.addEventListener("input",render);
 document.addEventListener("keydown",e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();search.focus()}});
+function slugify(s){
+  return s.toLowerCase().trim().replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+}
 grid.addEventListener("click",e=>{
   const card=e.target.closest(".brand-card"); if(!card)return;
   const brand=decodeURIComponent(card.dataset.brand);
-  const b=brands.find(x=>x.brand===brand);
-  if(b?.image) window.open(b.image,"_blank","noopener");
+  window.location.href = "brands/" + slugify(brand) + ".html";
 });
 render();
